@@ -9,6 +9,7 @@ async function fetchDirectoryContents(path) {
 
 async function getFileTree(path) {
   const items = await fetchDirectoryContents(path);
+  console.log(path);
   if (!Array.isArray(items)) return [];
 
   const fileTree = [];
